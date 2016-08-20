@@ -1,0 +1,119 @@
+color-code-background = #042029
+color-simple-code-background = #93AAAC
+
+article
+    pre
+        padding 10px 16px
+
+    code, pre
+        font-family font-mono
+        color #333
+        font-size 1em
+        // white-space pre-wrap
+        // word-wrap break-word
+
+    p code, li code
+        margin 0 3px
+        padding: 0 5px;
+        border-radius: 5px;
+        border: 1px solid #e0e0e0
+        color: #212121;
+        background-color #eeeeee
+
+pre .keyword
+    color #859900
+
+pre .tag
+    color #f8f8f2
+
+pre
+    // Theme: Monokai plus Solarized(Dark) from Sublime Text theme
+    .comment
+    .template_comment
+    .diff .header
+    .doctype
+    .pi
+    .lisp .string
+    .javadoc
+        color #75715c
+        font-style italic
+
+    .doctype
+        color #268bd2
+
+    .keyword
+    .winutils
+    .method
+    .addition
+    .css .tag
+    .request
+    .status
+    .nginx .title
+        color #66d9ef
+
+    .number
+    .command
+    .phpdoc
+    .tex .formula
+    .regexp
+    .hexcolor
+        color #ae81fc
+
+    .string
+    .tag .value
+        color #e6db6e
+
+    .title
+    .localvars
+    .chunk
+    .decorator
+    .built_in
+    .identifier
+    .vhdl
+    .literal
+    .id
+        color #f22672
+
+    .attribute
+    .variable
+    .lisp .body
+    .smalltalk .number
+    .constant
+    .class .title
+    .parent
+    .haskell .type
+        color #a6e22e
+
+    .preprocessor
+    .preprocessor .keyword
+    .shebang
+    .symbol
+    .symbol .string
+    .diff .change
+    .special
+    .attr_selector
+    .important
+    .subst
+    .cdata
+    .clojure .title
+        color #cb4b16
+
+    .deletion
+        color #dc322f
+
+// 调整hexo默认的代码段（table）样式
+figure.highlight
+    margin-left 0
+    margin-right 0
+    overflow auto
+
+    td
+        padding 0
+    pre
+        margin 0
+        overflow auto
+    figcaption a
+        position absolute
+        right 25px
+    .gutter
+        width 5%

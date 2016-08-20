@@ -1,0 +1,122 @@
+html
+    color rgba(0, 0, 0, 0.8)
+
+.container
+    width 700px
+    @media (max-width: 767px)
+        width 90%
+    .row
+        margin-left auto
+        margin-right auto
+.container.main-container
+    @media (max-width: 767px)
+        width 100%
+
+// HTML标签样式
+// 重置materialize中的各种列表样式
+ul, ol
+    padding-left 20px
+    &.tabs
+        padding-left 0
+
+ul, ul li
+    list-style-type disc
+    word-break break-word
+
+nav, .fixed-action-btn
+    ul
+        padding-left 0
+    li
+        list-style-type none
+
+ul.pagination, ul.collapsible, ul.indicators
+    padding-left 0
+    li
+        list-style-type none
+
+img
+    max-width 100%
+    padding 4px
+    background-color #F5F5F5
+    border 1px solid #ddd
+    border-radius 4px
+
+strong
+    font-weight bold
+
+blockquote
+    background-color rgba(0, 0, 0, 0.03)
+    padding 0.6rem 0.6rem 0.6rem 1.2rem
+
+    // p
+    //     margin 0 !important
+
+table
+    margin-bottom 1.5em
+
+nav ul
+    a:hover
+        background-color rgba(0, 0, 0, 0)
+
+nav .brand-logo
+    font-size 1.6rem
+
+.card
+    margin-top 0
+
+    &.medium
+        height 440px
+
+    .card-content
+        padding 25px 25px 30px
+
+        @media (max-width: 767px)
+            padding-left 15px
+            padding-right 15px
+
+    .card-action
+        padding-left 25px
+        padding-right 25px
+
+    // .card-content p
+    //     margin 0.5em 0
+
+.chip
+    height initial
+    line-height 18px
+    padding 4px 14px
+    color white
+
+.breadcrumb
+    font-size 1em
+
+// 图片lightbox点击缩放效果
+.materialboxed
+    display initial
+    margin-top 10px
+    max-width 100%
+    &.active
+        max-width initial
+
+// 幻灯片的导航按钮位置
+.slider .indicators
+    bottom 60px
+    z-index 10
+
+.main-container
+    margin-top 30px
+
+.mt-0
+    margin-top 0
+
+.collection a.collection-item:not(.active):hover
+    background-color #f5f5f5
+
+// 将默认的图标字体换为FontAwesome
+.breadcrumb:before
+    content "\f105"
+    font-family: FontAwesome
+
+// FontAwesome
+.fa
+    margin-right 5px

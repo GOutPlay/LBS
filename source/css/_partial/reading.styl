@@ -1,0 +1,27 @@
+.book-item
+    display inline-block
+    position relative
+
+    img
+        padding 0
+        transition all 0.3s ease-out
+
+    &:hover img
+        transform scale(1.05)
+
+    .card-content
+        padding 15px
+
+        .card-title
+            line-height initial
+            font-size 1.4em
+
+    .card.small
+        .card-image
+            min-height 70%
+            max-height 70%
+        .card-content
+            max-height 30%
+
+    .external-link
+        font-size 1.2em

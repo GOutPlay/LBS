@@ -1,0 +1,10 @@
+<% if (item.categories && item.categories.length > 0){ %>
+    <%
+        var cats = [];
+        item.categories.forEach(function(cat){
+            cats.push('<a class="breadcrumb" href="' + config.root + cat.path + '">' + cat.name + '</a>');
+        });
+    %>
+    
+    <%- cats.join('') %>
+<% } %>

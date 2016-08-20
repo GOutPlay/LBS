@@ -1,0 +1,24 @@
+<nav class="<%= theme.color.header %>">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down"><%= config.title %></a>
+            <ul class="right hide-on-med-and-down">
+                <% for (var i in theme.menu){ %>
+                    <li>
+                        <a class="<%= theme.menu[i].class %> <%= theme.menu[i].category ? 'category-menu' : '' %>" href="<%= theme.menu[i].link %>" <% if (theme.menu[i].category) { %>data-activates="category-menu" <% } %>>
+                            <i class="fa fa-<%= theme.menu[i].icon %> "></i>
+                            <% var menuTextKey = 'menu.' + theme.menu[i].id; %>
+                            <%= __(menuTextKey) %>
+                        </a>
+                    </li>
+                <% } %>
+            </ul>
+            <%- partial('side_nav') %>
+        </div>
+    </div>
+</nav>
+
+<%- partial('search') %>

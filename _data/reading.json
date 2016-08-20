@@ -1,0 +1,44 @@
+{
+    "define": {
+	    "readed": "已读",
+        "reading": "在读",
+        "wanted": "想读"
+    },
+    "contents": {
+        "readed": [{
+            "title": "众妙之门：网站UI设计之道",
+            "cover": "http://img3.douban.com/lpic/s23139051.jpg",
+            "review": "推荐非UI人士了解UI阅读。",
+            "score": "7",
+            "doubanLink": "http://book.douban.com/subject/20281463/"
+        }, {
+            "title": "JavaScript模式",
+            "cover": "http://img5.douban.com/lpic/s11337059.jpg",
+            "review": "书很薄，但内容相当实用。",
+            "score": "8.5",
+            "doubanLink": "http://book.douban.com/subject/11506062/"
+        }, {
+            "title": "JavaScript语言精粹",
+            "cover": "http://img3.douban.com/lpic/s11373174.jpg",
+            "review": "这是一本前端人员的基础书，强烈推荐阅读，而且越早看受益越多！",
+            "score": "9.5",
+            "doubanLink": "http://book.douban.com/subject/11874748/"
+        }],
+		
+		"reading": [{
+            "title": "网络游戏核心技术与实战",
+            "cover": "http://img4.douban.com/lpic/s27881888.jpg",
+            "review": "",
+            "score": null,
+            "doubanLink": "http://book.douban.com/subject/25850090/"
+        }],
+
+        "wanted": [{
+            "title": "计算机程序的构造和解释",
+            "cover": "http://img4.douban.com/lpic/s1113106.jpg",
+            "review": "",
+            "score": null,
+            "doubanLink": "http://book.douban.com/subject/1148282/"
+        }]
+    }
+}

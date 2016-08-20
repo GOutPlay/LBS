@@ -1,0 +1,34 @@
+<footer class="page-footer <%= theme.color.footer %> darken-1">
+    <% if (site.data.link) { %>
+    <div class="container">
+        <div class="row">
+            <% if (site.data.link.social) { %>
+            <div class="social-group col m3 s12">
+                <h5 class="white-text"><%= __('social') %></h5>
+                <% for (var type in site.data.link.social) { %>
+                    <a class="social-link" href="<%= site.data.link.social[type] %>" target="_blank">
+                        <i class="fa fa-2x fa-<%= type %>"></i>
+                    </a>
+                <% } %>
+            </div>
+            <% } %>
+
+            <% if (site.data.link && site.data.link.extern) { %>
+            <div class="col m9 s12">
+                <h5 class="white-text"><%= __('blogroll') %></h5>
+                <% for (var name in site.data.link.extern) { %>
+                    <a class="social-link" href="<%= site.data.link.extern[name] %>" target="_blank"><%= name %></a>
+                <% } %>
+            </div>
+            <% } %>
+        </div>
+    </div>
+    <% } %>
+
+    <div class="footer-copyright <%= theme.color.link %>-link-context">
+        <div class="container">
+            <%= theme.copyright %>
+            <p class="right" style="margin-top: 0;"><%= __('powered.first') %> <a href="https://hexo.io">Hexo</a> <%= __('powered.last') %> <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+        </div>
+    </div>
+</footer>

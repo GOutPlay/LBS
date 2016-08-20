@@ -1,0 +1,41 @@
+categories: Categories
+search: Search
+tags: Tags
+tagcloud: Tag Cloud
+prev: Prev
+next: Next
+comment: Comments
+archive_a: Archives
+archive_b: "Archives: %s"
+page: Page %d
+recent_posts: Recent Posts
+blogroll: Links
+returntop: Return to top
+
+menu:
+    home: Home
+    archives: Archives
+    category: Categories
+    reading: Reading
+    about: About
+    search: Search
+social: Social
+powered:
+    first: "Blog powered by"
+    last: "| Theme"
+current_page: Current page
+page_name:
+    categories: (Categories)
+    tags: (Tags)
+    archives: (Archives)
+reading:
+    score: Score
+    comment: Comment
+about:
+    about: About
+    skills: Skills
+    works: Works & Projects
+construction: Page under construction...
+go_back_home: Go back home
+no_title: No title
+side_nav_paper: "%d"
