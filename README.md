@@ -21,3 +21,7 @@
 MCC参考[wiki](https://zh.wikipedia.org/wiki/%E8%A1%8C%E5%8B%95%E8%A3%9D%E7%BD%AE%E5%9C%8B%E5%AE%B6%E4%BB%A3%E7%A2%BC)
 
 实现需要的数据:中国电信CDMA SID NID对应表\联通\移动
+
+### [中国联通](http://doc.mbalib.com/view/830d311cf94560e0bdcd895ae6b49a8d.html)
+
+### [开放基站数据](http://opencellid.org/)
