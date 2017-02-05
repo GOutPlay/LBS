@@ -49,7 +49,7 @@ MCC参考[wiki](https://zh.wikipedia.org/wiki/%E8%A1%8C%E5%8B%95%E8%A3%9D%E7%BD%
 
 ### [中国联通](http://doc.mbalib.com/view/830d311cf94560e0bdcd895ae6b49a8d.html)
 
-### [开放基站数据](http://opencellid.org/)
+### [开放基站数据](http://opencellid.org/downloads/?apiKey=efad37b3-aaba-4c5f-96e2-f16be564c49f)
 
 ### 收集基站数据原理
 卫星GPS结合多基站信号强度的定位方式，以解决基站在数据库中不存在时，可以提示用户开启GPS。然后将定位数据以及基础一同提交数据库，以完善基站数据库。
