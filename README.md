@@ -6,6 +6,7 @@
 >如何查看手机基站信息： 1. Android智能机：在拨打电话界面输入\*#\*#4636#\*#\* 查看相应的基站信息，一般为16进制，请选择1进制进行查询。 2. IPhone：在拨打电话界面输入*3001#12345#*查看相应的基站信息
 
 * Android 获取基站信息 参考[TelephonyManager](https://developer.android.google.cn/reference/android/telephony/TelephonyManager.html)
+
 一、 什么是LAC：
 Location Area Code(LAC)地区区域码，用来划分区域 
 
