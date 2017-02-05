@@ -22,7 +22,7 @@
 
 由此可见移动，联通2G 网都可使用GsmCellLocation,电信2G,3G网则使用CdmaCellLocation,那么移动3G和联通3G又当如何,移动3G网也可使用GsmCellLocation，听说是TD-SCDMA衍生于GSM.
 
-[考资料](ttp://m.wendangku.net/doc/38819619a2161479171128cf.html)
+(考资料)[ttp://m.wendangku.net/doc/38819619a2161479171128cf.html]
 
 一、 什么是LAC：
 Location Area Code(LAC)地区区域码，用来划分区域 
