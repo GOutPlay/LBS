@@ -9,15 +9,18 @@
 
 ## 三大网络运营商的网络制式对应如下：
 移动2G 网 --> GSM
+
 移动3G 网 --> TD-SCDMA
+
 电信2G 网 --> CDMA
+
 电信3G 网 --> CDMA2000
+
 联通2G 网 --> GSM
+
 联通3G 网 --> WCDMA
-由此可见移动，联通2G 网都可使用GsmCellLocation
-电信2G,3G网则使用CdmaCellLocation
-那么移动3G和联通3G又当如何
-移动3G网也可使用GsmCellLocation，听说是TD-SCDMA衍生于GSM
+
+由此可见移动，联通2G 网都可使用GsmCellLocation,电信2G,3G网则使用CdmaCellLocation,那么移动3G和联通3G又当如何,移动3G网也可使用GsmCellLocation，听说是TD-SCDMA衍生于GSM.
 
 (参考资料)[http://m.wendangku.net/doc/38819619a2161479171128cf.html]
 一、 什么是LAC：
