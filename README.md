@@ -50,3 +50,7 @@ MCC参考[wiki](https://zh.wikipedia.org/wiki/%E8%A1%8C%E5%8B%95%E8%A3%9D%E7%BD%
 ### [中国联通](http://doc.mbalib.com/view/830d311cf94560e0bdcd895ae6b49a8d.html)
 
 ### [开放基站数据](http://opencellid.org/)
+
+### 收集基站数据原理
+卫星GPS结合多基站信号强度的定位方式，为以后使用纯基站定位提供了更高的准确性保障
+[如何通过AT指令获取基站定位](http://www.mamicode.com/info-detail-381838.html)
