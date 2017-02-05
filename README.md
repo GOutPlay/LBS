@@ -52,7 +52,8 @@ MCC参考[wiki](https://zh.wikipedia.org/wiki/%E8%A1%8C%E5%8B%95%E8%A3%9D%E7%BD%
 ### [开放基站数据](http://opencellid.org/)
 
 ### 收集基站数据原理
-卫星GPS结合多基站信号强度的定位方式，为以后使用纯基站定位提供了更高的准确性保障
+卫星GPS结合多基站信号强度的定位方式，以解决基站在数据库中不存在时，可以提示用户开启GPS。然后将定位数据以及基础一同提交数据库，以完善基站数据库。
+
 
 ###### 参考资料
 [如何通过AT指令获取基站定位](http://www.mamicode.com/info-detail-381838.html)
