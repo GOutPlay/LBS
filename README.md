@@ -33,15 +33,16 @@ LAC码、Cid码是基站定位的必要参数，这两个缺一不可，否则�
 
 
 通过TelephonyManager 获取lac:mcc:mnc:cell-id（基站信息）的解释：
-*1. MCC，Mobile Country Code，移动国家代码（中国的为460）；
 
-*2. MNC，Mobile Network Code，移动网络号码（中国移动为0，中国联通为1，中国电信为2）； 
+* 1. MCC，Mobile Country Code，移动国家代码（中国的为460）；
 
-*3. LAC，Location Area Code，位置区域码；
+* 2. MNC，Mobile Network Code，移动网络号码（中国移动为0，中国联通为1，中国电信为2）； 
 
-*4. CID，Cell Identity，基站编号；
+* 3. LAC，Location Area Code，位置区域码；
 
-*5. BSSS，Base station signal strength，基站信号强度。
+* 4. CID，Cell Identity，基站编号；
+
+* 5. BSSS，Base station signal strength，基站信号强度。
 
 MCC参考[wiki](https://zh.wikipedia.org/wiki/%E8%A1%8C%E5%8B%95%E8%A3%9D%E7%BD%AE%E5%9C%8B%E5%AE%B6%E4%BB%A3%E7%A2%BC)
 
