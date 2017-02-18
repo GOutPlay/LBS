@@ -156,4 +156,9 @@ void bd_decrypt(double bd_lat, double bd_lon, double &gg_lat, double &gg_lon)
     gg_lat = z * sin(theta);
 }
 ```
-参考资料 [地球坐标-火星坐标-百度坐标及之间的转换算法 C# - kelite](http://www.tuicool.com/articles/JzAVj2)
+参考资料 
+
+* [地球坐标-火星坐标-百度坐标及之间的转换算法 C# - kelite](http://www.tuicool.com/articles/JzAVj2)
+
+* [GOOGLE wgtochina_lb](https://www.google.com.tw/search?q=wgtochina_lb&oq=wgtochina_lb&aqs=chrome..69i57&sourceid=chrome&ie=UTF-8)
+
