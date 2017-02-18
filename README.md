@@ -57,3 +57,103 @@ MCC参考[wiki](https://zh.wikipedia.org/wiki/%E8%A1%8C%E5%8B%95%E8%A3%9D%E7%BD%
 
 ###### 参考资料
 [如何通过AT指令获取基站定位](http://www.mamicode.com/info-detail-381838.html)
+
+## 天朝坐标相关转换算法
+
+### WGS(GPS) 转换火星坐标
+```c++
+using System;
+
+namespace Navi
+{
+    class EvilTransform
+    {
+        const double pi = 3.14159265358979324;
+
+        //
+        // Krasovsky 1940
+        //
+        // a = 6378245.0, 1/f = 298.3
+        // b = a * (1 - f)
+        // ee = (a^2 - b^2) / a^2;
+        const double a = 6378245.0;
+        const double ee = 0.00669342162296594323;
+
+        //
+        // World Geodetic System ==> Mars Geodetic System
+        public static void transform(double wgLat, double wgLon, out double mgLat, out double mgLon)
+        {
+            if (outOfChina(wgLat, wgLon))
+            {
+                mgLat = wgLat;
+                mgLon = wgLon;
+                return;
+            }
+            double dLat = transformLat(wgLon - 105.0, wgLat - 35.0);
+            double dLon = transformLon(wgLon - 105.0, wgLat - 35.0);
+            double radLat = wgLat / 180.0 * pi;
+            double magic = Math.Sin(radLat);
+            magic = 1 - ee * magic * magic;
+            double sqrtMagic = Math.Sqrt(magic);
+            dLat = (dLat * 180.0) / ((a * (1 - ee)) / (magic * sqrtMagic) * pi);
+            dLon = (dLon * 180.0) / (a / sqrtMagic * Math.Cos(radLat) * pi);
+            mgLat = wgLat + dLat;
+            mgLon = wgLon + dLon;
+        }
+
+        static bool outOfChina(double lat, double lon)
+        {
+            if (lon < 72.004 || lon > 137.8347)
+                return true;
+            if (lat < 0.8293 || lat > 55.8271)
+                return true;
+            return false;
+        }
+
+        static double transformLat(double x, double y)
+        {
+            double ret = -100.0 + 2.0 * x + 3.0 * y + 0.2 * y * y + 0.1 * x * y + 0.2 * Math.Sqrt(Math.Abs(x));
+            ret += (20.0 * Math.Sin(6.0 * x * pi) + 20.0 * Math.Sin(2.0 * x * pi)) * 2.0 / 3.0;
+            ret += (20.0 * Math.Sin(y * pi) + 40.0 * Math.Sin(y / 3.0 * pi)) * 2.0 / 3.0;
+            ret += (160.0 * Math.Sin(y / 12.0 * pi) + 320 * Math.Sin(y * pi / 30.0)) * 2.0 / 3.0;
+            return ret;
+        }
+
+        static double transformLon(double x, double y)
+        {
+            double ret = 300.0 + x + 2.0 * y + 0.1 * x * x + 0.1 * x * y + 0.1 * Math.Sqrt(Math.Abs(x));
+            ret += (20.0 * Math.Sin(6.0 * x * pi) + 20.0 * Math.Sin(2.0 * x * pi)) * 2.0 / 3.0;
+            ret += (20.0 * Math.Sin(x * pi) + 40.0 * Math.Sin(x / 3.0 * pi)) * 2.0 / 3.0;
+            ret += (150.0 * Math.Sin(x / 12.0 * pi) + 300.0 * Math.Sin(x / 30.0 * pi)) * 2.0 / 3.0;
+            return ret;
+        }
+    }
+}
+```
+
+### 火星坐标到百度坐标的转换
+
+```C++
+const double x_pi = 3.14159265358979324 * 3000.0 / 180.0;
+
+//将 GCJ-02 坐标转换成 BD-09 坐标
+void bd_encrypt(double gg_lat, double gg_lon, double &bd_lat, double &bd_lon)
+{
+    double x = gg_lon, y = gg_lat;
+    double z = sqrt(x * x + y * y) + 0.00002 * sin(y * x_pi);
+    double theta = atan2(y, x) + 0.000003 * cos(x * x_pi);
+    bd_lon = z * cos(theta) + 0.0065;
+    bd_lat = z * sin(theta) + 0.006;
+}
+
+//将 BD-09 坐标转换成  GCJ-02坐标
+void bd_decrypt(double bd_lat, double bd_lon, double &gg_lat, double &gg_lon)
+{
+    double x = bd_lon - 0.0065, y = bd_lat - 0.006;
+    double z = sqrt(x * x + y * y) - 0.00002 * sin(y * x_pi);
+    double theta = atan2(y, x) - 0.000003 * cos(x * x_pi);
+    gg_lon = z * cos(theta);
+    gg_lat = z * sin(theta);
+}
+```
+参考资料 [地球坐标-火星坐标-百度坐标及之间的转换算法 C# - kelite](http://www.tuicool.com/articles/JzAVj2)
