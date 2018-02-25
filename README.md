@@ -184,7 +184,7 @@ void bd_decrypt(double bd_lat, double bd_lon, double &gg_lat, double &gg_lon)
 }
 ```
 ### [EXIF  具体函意](http://code.ciaoca.com/javascript/exif-js/)
-
+### 利用exif解决ios手机上传竖拍照片旋转90度及视频问题
 参考资料 
 
 * [地球坐标-火星坐标-百度坐标及之间的转换算法 C# - kelite](http://www.tuicool.com/articles/JzAVj2)
