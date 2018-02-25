@@ -193,4 +193,4 @@ void bd_decrypt(double bd_lat, double bd_lon, double &gg_lat, double &gg_lon)
 
 * [OSS文档](https://help.aliyun.com/document_detail/32250.html?spm=a2c4g.11186623.6.1039.4jJRBR)
 
-* [ExitInfo](http://oss-attachment.cn-hangzhou.oss.aliyun-inc.com/DC-008-Translation-2016-E.pdf?spm=a2c4g.11186623.2.4.hKAmfz&file=DC-008-Translation-2016-E.pdf)
+* [ExifInfo](http://oss-attachment.cn-hangzhou.oss.aliyun-inc.com/DC-008-Translation-2016-E.pdf?spm=a2c4g.11186623.2.4.hKAmfz&file=DC-008-Translation-2016-E.pdf)
