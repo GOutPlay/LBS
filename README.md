@@ -155,9 +155,41 @@ void bd_decrypt(double bd_lat, double bd_lon, double &gg_lat, double &gg_lon)
     gg_lat = z * sin(theta);
 }
 ```
+
+# 获取照中的信息
+> 在手机中，打开文件夹软件可以看到照片是按日期排序的，但是如何按GPS\日期排序呢？以下是照片中存放的信息:
+```javascript
+{
+    "Compression": {"value": "6"},
+    "DateTime": {"value": "2015:02:11 15:38:27"},
+    "ExifTag": {"value": "2212"},
+    "FileSize": {"value": "23471"},
+    "Format": {"value": "jpg"},
+    "GPSLatitude": {"value": "0deg "},
+    "GPSLatitudeRef": {"value": "North"},
+    "GPSLongitude": {"value": "0deg "},
+    "GPSLongitudeRef": {"value": "East"},
+    "GPSMapDatum": {"value": "WGS-84"},
+    "GPSTag": {"value": "4292"},
+    "GPSVersionID": {"value": "2 2 0 0"},
+    "ImageHeight": {"value": "333"},
+    "ImageWidth": {"value": "424"},
+    "JPEGInterchangeFormat": {"value": "4518"},
+    "JPEGInterchangeFormatLength": {"value": "3232"},
+    "Orientation": {"value": "7"},
+    "ResolutionUnit": {"value": "2"},
+    "Software": {"value": "Microsoft Windows Photo Viewer 6.1.7600.16385"},
+    "XResolution": {"value": "96/1"},
+    "YResolution": {"value": "96/1"}
+}
+```
+
 参考资料 
 
 * [地球坐标-火星坐标-百度坐标及之间的转换算法 C# - kelite](http://www.tuicool.com/articles/JzAVj2)
 
 * [GOOGLE wgtochina_lb](https://www.google.com.tw/search?q=wgtochina_lb&oq=wgtochina_lb&aqs=chrome..69i57&sourceid=chrome&ie=UTF-8)
 
+* [OSS文档](https://help.aliyun.com/document_detail/32250.html?spm=a2c4g.11186623.6.1039.4jJRBR)
+
+* [ExitInfo](http://oss-attachment.cn-hangzhou.oss.aliyun-inc.com/DC-008-Translation-2016-E.pdf?spm=a2c4g.11186623.2.4.hKAmfz&file=DC-008-Translation-2016-E.pdf)
