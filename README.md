@@ -156,8 +156,8 @@ void bd_decrypt(double bd_lat, double bd_lon, double &gg_lat, double &gg_lon)
 }
 ```
 
-# 获取照中的信息
-> 在手机中，打开文件夹软件可以看到照片是按日期排序的，但是如何按GPS\日期排序呢？以下是照片中存放的信息:
+# EXIF2.31
+> 在手机中，打开文件夹软件可以看到照片是按日期排序的，但是如何按GPS\日期排序呢？以下是照片EXIF中存放的信息:
 ```javascript
 {
     "Compression": {"value": "6"},
