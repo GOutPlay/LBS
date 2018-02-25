@@ -183,6 +183,7 @@ void bd_decrypt(double bd_lat, double bd_lon, double &gg_lat, double &gg_lon)
     "YResolution": {"value": "96/1"}
 }
 ```
+### (EXIF  具体函意)[http://code.ciaoca.com/javascript/exif-js/]
 
 参考资料 
 
