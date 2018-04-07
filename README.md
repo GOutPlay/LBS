@@ -184,6 +184,16 @@ void bd_decrypt(double bd_lat, double bd_lon, double &gg_lat, double &gg_lon)
 }
 ```
 ### [EXIF  具体函意](http://code.ciaoca.com/javascript/exif-js/)
+### 查看EXIF信息
+1. vi -b datafile
+2. vim command model: %!xxd
+```
+00000000: ffd8 ffe0 0010 4a46 4946 0001 0100 0001  ......JFIF......
+00000010: 0001 0000 ffe1 0008 4578 6966 0000 ffdb  ........Exif....
+00000020: 0043 0005 0304 0404 0305 0404 0405 0505  .C..............
+00000030: 0607 0c08 0707 0707 0f0b 0b09 0c11 0f12  ................
+00000040: 1211 0f11 1113 161c 1713 141a 1511 1118  ................
+```
 ### 利用exif解决ios手机上传竖拍照片旋转90度及视频问题
 ### Exif是空的
 通过QQ空间，微博，微信朋友圈等上传的照片的exif信息是会被去除掉的
