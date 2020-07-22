@@ -1,3 +1,7 @@
+# 地理信息服务技术（GIS）
+
+> 移动GIS服务市场
+
 ## LBS(基站定位)
 基站定位是指手机发射基站根据与手机的距离来计算手机坐标地理位置的一种功能，基站定位一般应用于手机用户，手机基站定位服务又叫做移动位置服务（LBS服务），它是通过电信移动运营商的网络（如GSM网）获取移动终端用户的位置信息（经纬度坐标），在电子地图平台的支持下，为用户提供相应服务的一种增值业务。 
 
@@ -200,10 +204,14 @@ void bd_decrypt(double bd_lat, double bd_lon, double &gg_lat, double &gg_lon)
 
 ## 空间索引  Spatial Index
 
-### 基于Redis实现附近查询
+#### 基于Redis实现附近查询
+> 使用Geohash算法计算距离
+
 - [GEO](https://redis.io/commands/geoadd)
 
 #### 基于mysql的附近查询
+> 计算两个点之间的距离
+
 ```sql
 SELECT 
   `pkg_handle_location`.`memo` as `name`,
