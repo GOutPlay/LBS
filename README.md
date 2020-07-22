@@ -215,9 +215,6 @@ HAVING `distance` < 1000
 ORDER BY `distance` LIMIT 100;
 ```
 
-## 参考
-
-
 # 参考资料 
 
 * [附近地点搜索](https://wizardforcel.gitbooks.io/the-art-of-programming-by-july/content/a.14.html)
