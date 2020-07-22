@@ -197,7 +197,32 @@ void bd_decrypt(double bd_lat, double bd_lon, double &gg_lat, double &gg_lon)
 ### 利用exif解决ios手机上传竖拍照片旋转90度及视频问题
 ### Exif是空的
 通过QQ空间，微博，微信朋友圈等上传的照片的exif信息是会被去除掉的
+
+## 空间索引  Spatial Index
+
+### 基于Redis实现附近查询
+- [GEO](https://redis.io/commands/geoadd)
+
+#### 基于mysql的附近查询
+```sql
+SELECT 
+  `pkg_handle_location`.`memo` as `name`,
+  `pkg_handle_location`.`latitude` ,
+  `pkg_handle_location`.`longitude`, 
+  ROUND(6378.138*2*ASIN(SQRT(POW(SIN((22*PI()/180-`latitude`*PI()/180)/2),2)+COS(22*PI()/180)*COS(`latitude`*PI()/180)*POW(SIN((113*PI()/180-`longitude`*PI()/180)/2),2)))*1000) AS `distance`
+FROM `sys_network_packet`.`pkg_handle_location`
+HAVING `distance` < 1000
+ORDER BY `distance` LIMIT 100;
+```
+
+## 参考
+
+
 # 参考资料 
+
+* [附近地点搜索](https://wizardforcel.gitbooks.io/the-art-of-programming-by-july/content/a.14.html)
+
+* [高效的多维空间点索引算法 — Geohash 和 Google S2](https://halfrost.com/go_spatial_search/)
 
 * [地球坐标-火星坐标-百度坐标及之间的转换算法 C# - kelite](http://www.tuicool.com/articles/JzAVj2)
 
