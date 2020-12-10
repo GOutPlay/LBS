@@ -241,7 +241,17 @@ ORDER BY `distance` LIMIT 100;
 ### Exif是空的
 通过QQ空间，微博，微信朋友圈等上传的照片的exif信息是会被去除掉的
 
+## 基站定位
+### 基站数据库
 
+1. [Mozilla Location Service: offline database](https://location.services.mozilla.com/downloads)
+2. [OpenCellId: offline database](https://www.opencellid.org/downloads.php)
+
+### CellId编号查询
+
+- https://cellidfinder.com/mcc-mnc
+- 在线反向查询基站地理位置 https://www.opengps.cn/data/cell/search.aspx
+- https://cellidfinder.com/
 # 参考资料 
 
 * [附近地点搜索](https://wizardforcel.gitbooks.io/the-art-of-programming-by-july/content/a.14.html)
